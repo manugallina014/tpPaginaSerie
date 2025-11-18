@@ -1,0 +1,185 @@
+/* Importar la fuente distintiva de la serie */
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+/* Colores Temáticos */
+:root {
+    --color-bg-dark: #1f1f1f; /* Fondo oscuro */
+    --color-text-light: #f0f0f0; /* Texto claro */
+    --color-meta-green: #00ff00; /* Verde Brillante (la meta) */
+    --color-hazard-yellow: #ff9900; /* Amarillo/Naranja de advertencia */
+    --color-border-dark: #333; /* Borde oscuro */
+}
+
+/* Estilos Globales (Dark Theme) */
+body {
+    font-family: 'Share Tech Mono', monospace; 
+    background-color: #0d0d0d; /* Fondo muy oscuro */
+    color: var(--color-text-light);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--color-bg-dark);
+    padding: 25px 0;
+    text-align: center;
+    border-bottom: 3px solid var(--color-meta-green); /* Borde verde meta */
+}
+
+/* Estilo específico para el header de la página de inicio */
+.main-header {
+    background-image: url('img/breakingBadFondo.png'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Cubrir todo el header */
+    background-position: center; /* Centrar la imagen */
+    background-repeat: no-repeat; /* No repetir */
+    min-height: 250px; /* Altura mínima para que se vea el fondo */
+    display: flex; /* Para centrar el h1 verticalmente */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    border-bottom: 3px solid var(--color-meta-green);
+}
+
+.main-header h1 {
+    color: var(--color-text-light); /* Color de texto blanco para que se vea sobre el fondo */
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente para el texto */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-shadow: 0 0 15px var(--color-meta-green); /* Resplandor más fuerte */
+}
+
+
+h1 {
+    margin: 0;
+    font-size: 3em;
+    color: var(--color-hazard-yellow); /* Título en amarillo peligro */
+    text-shadow: 0 0 10px rgba(255, 153, 0, 0.5); /* Resplandor */
+}
+
+main {
+    padding: 30px;
+    max-width: 900px;
+    margin: 20px auto;
+    background: var(--color-bg-dark);
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.2); /* Sutil resplandor verde */
+    border-radius: 8px;
+}
+
+h2, h3 {
+    color: var(--color-meta-green);
+    border-bottom: 1px solid var(--color-border-dark);
+    padding-bottom: 8px;
+    margin-top: 30px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px dashed var(--color-border-dark);
+    margin: 25px 0;
+}
+
+/* Estilos de Navegación */
+nav {
+    background-color: var(--color-border-dark);
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--color-meta-green); /* El enlace se ilumina al pasar el ratón */
+    background-color: #444;
+    border-radius: 3px;
+}
+
+/* Estilos para Contenido General */
+p {
+    color: var(--color-text-light);
+}
+
+/* Estilos para Personajes */
+.character-card {
+    padding: 20px;
+    margin-bottom: 25px;
+    border: 1px solid var(--color-border-dark);
+    border-left: 5px solid var(--color-hazard-yellow); /* Borde lateral llamativo */
+    border-radius: 5px;
+    background-color: #2a2a2a;
+}
+
+.character-card img {
+    width: 100%; /* Ajustar al contenedor */
+    max-width: 400px; /* Limitar ancho para imágenes grandes */
+    height: auto;
+    display: block;
+    margin: 10px auto; /* Centrar imagen */
+    border: 2px solid var(--color-meta-green);
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+.character-card figure {
+    margin: 0;
+    text-align: center; /* Centrar figcaption */
+}
+
+.character-card figcaption {
+    font-style: italic;
+    color: #bbb;
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+
+
+/* Estilos para Capítulos (Enlaces) */
+.resource-links {
+    list-style: disc;
+    padding-left: 30px;
+}
+
+.resource-links li {
+    margin-bottom: 10px;
+}
+
+.resource-links a {
+    color: var(--color-hazard-yellow);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.resource-links a:hover {
+    text-decoration: underline;
+    color: var(--color-meta-green);
+}
+
+/* Estilos para el Video Iframe */
+.video-section iframe {
+    width: 100%;
+    height: 400px;
+    margin-top: 15px;
+    border: 3px solid var(--color-hazard-yellow); /* Borde de marco de video peligroso */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: var(--color-border-dark);
+    color: #999;
+    margin-top: 20px;
+    font-size: 0.8em;
+}
