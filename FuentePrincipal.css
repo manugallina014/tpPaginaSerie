@@ -3,57 +3,58 @@
 
 /* Colores Temáticos */
 :root {
-    --color-bg-dark: #1f1f1f; /* Fondo oscuro */
-    --color-text-light: #f0f0f0; /* Texto claro */
-    --color-meta-green: #00ff00; /* Verde Brillante (la meta) */
-    --color-hazard-yellow: #ff9900; /* Amarillo/Naranja de advertencia */
-    --color-border-dark: #333; /* Borde oscuro */
+    --color-bg-dark: #1f1f1f;
+    --color-text-light: #f0f0f0;
+    --color-meta-green: #00ff00;
+    --color-hazard-yellow: #ff9900;
+    --color-border-dark: #333;
 }
 
 /* Estilos Globales (Dark Theme) */
 body {
     font-family: 'Share Tech Mono', monospace; 
-    background-color: #0d0d0d; /* Fondo muy oscuro */
+    background-color: #0d0d0d;
     color: var(--color-text-light);
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    font-size: 16px; /* Tamaño base */
 }
 
 header {
     background-color: var(--color-bg-dark);
     padding: 25px 0;
     text-align: center;
-    border-bottom: 3px solid var(--color-meta-green); /* Borde verde meta */
+    border-bottom: 3px solid var(--color-meta-green);
 }
 
-/* Estilo específico para el header de la página de inicio */
+/* Estilo específico para el header de la página de inicio (index.html) */
 .main-header {
-    background-image: url('img/breakingBadFondo.png'); /* Ruta de la imagen de fondo */
-    background-size: cover; /* Cubrir todo el header */
-    background-position: center; /* Centrar la imagen */
-    background-repeat: no-repeat; /* No repetir */
-    min-height: 250px; /* Altura mínima para que se vea el fondo */
-    display: flex; /* Para centrar el h1 verticalmente */
-    align-items: center; /* Centrar verticalmente */
-    justify-content: center; /* Centrar horizontalmente */
+    background-image: url('img/breakingBadFondo.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    min-height: 250px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
     border-bottom: 3px solid var(--color-meta-green);
 }
 
 .main-header h1 {
-    color: var(--color-text-light); /* Color de texto blanco para que se vea sobre el fondo */
-    background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente para el texto */
+    color: var(--color-text-light); 
+    background-color: rgba(0, 0, 0, 0.6); 
     padding: 10px 20px;
     border-radius: 5px;
-    text-shadow: 0 0 15px var(--color-meta-green); /* Resplandor más fuerte */
+    text-shadow: 0 0 15px var(--color-meta-green); 
 }
 
-
+/* Títulos generales */
 h1 {
     margin: 0;
     font-size: 3em;
-    color: var(--color-hazard-yellow); /* Título en amarillo peligro */
-    text-shadow: 0 0 10px rgba(255, 153, 0, 0.5); /* Resplandor */
+    color: var(--color-hazard-yellow); 
+    text-shadow: 0 0 10px rgba(255, 153, 0, 0.5); 
 }
 
 main {
@@ -61,7 +62,7 @@ main {
     max-width: 900px;
     margin: 20px auto;
     background: var(--color-bg-dark);
-    box-shadow: 0 0 25px rgba(0, 255, 0, 0.2); /* Sutil resplandor verde */
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.2); 
     border-radius: 8px;
 }
 
@@ -101,7 +102,7 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--color-meta-green); /* El enlace se ilumina al pasar el ratón */
+    color: var(--color-meta-green); 
     background-color: #444;
     border-radius: 3px;
 }
@@ -116,24 +117,24 @@ p {
     padding: 20px;
     margin-bottom: 25px;
     border: 1px solid var(--color-border-dark);
-    border-left: 5px solid var(--color-hazard-yellow); /* Borde lateral llamativo */
+    border-left: 5px solid var(--color-hazard-yellow); 
     border-radius: 5px;
     background-color: #2a2a2a;
 }
 
 .character-card img {
-    width: 100%; /* Ajustar al contenedor */
-    max-width: 400px; /* Limitar ancho para imágenes grandes */
+    width: 100%; 
+    max-width: 400px;
     height: auto;
     display: block;
-    margin: 10px auto; /* Centrar imagen */
+    margin: 10px auto; 
     border: 2px solid var(--color-meta-green);
     box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
 }
 
 .character-card figure {
     margin: 0;
-    text-align: center; /* Centrar figcaption */
+    text-align: center; 
 }
 
 .character-card figcaption {
@@ -142,7 +143,6 @@ p {
     margin-top: 5px;
     font-size: 0.9em;
 }
-
 
 /* Estilos para Capítulos (Enlaces) */
 .resource-links {
@@ -171,7 +171,7 @@ p {
     width: 100%;
     height: 400px;
     margin-top: 15px;
-    border: 3px solid var(--color-hazard-yellow); /* Borde de marco de video peligroso */
+    border: 3px solid var(--color-hazard-yellow); 
 }
 
 /* Footer */
@@ -181,5 +181,105 @@ footer {
     background-color: var(--color-border-dark);
     color: #999;
     margin-top: 20px;
-    font-size: 0.8em;
+    font-size: 0.9em;
+}
+
+/* =============================================
+   RESPONSIVE - MOBILE FIRST
+   ============================================= */
+
+@media (max-width: 768px) {
+    /* Aumentar tamaño de fuente general */
+    body {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+    
+    /* Títulos más grandes y legibles */
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.6em;
+    }
+    
+    h3 {
+        font-size: 1.3em;
+    }
+    
+    /* Párrafos más legibles */
+    p {
+        font-size: 1.1em;
+        line-height: 1.8;
+    }
+    
+    /* Main con menos padding */
+    main {
+        padding: 20px 15px;
+        margin: 10px;
+    }
+    
+    /* Navegación en columna */
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+    }
+    
+    nav a {
+        display: block;
+        padding: 12px;
+        font-size: 1.1em;
+    }
+    
+    /* Header más pequeño en móvil */
+    .main-header {
+        min-height: 180px;
+    }
+    
+    /* Character cards más compactas */
+    .character-card {
+        padding: 15px;
+    }
+    
+    .character-card img {
+        max-width: 100%;
+    }
+    
+    .character-card figcaption {
+        font-size: 1em;
+    }
+    
+    /* Links más grandes */
+    .resource-links a {
+        font-size: 1.1em;
+        line-height: 1.6;
+    }
+    
+    /* Footer más legible */
+    footer {
+        font-size: 1em;
+        padding: 20px 15px;
+    }
+    
+    /* Video responsive */
+    .video-section iframe {
+        height: 250px;
+    }
+}
+
+/* Para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    body {
+        font-size: 20px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    p {
+        font-size: 1.15em;
+    }
 }
